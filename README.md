@@ -1,11 +1,11 @@
 # Vote_demo23
-Blockchain Voting System Project Using Python
-1.) Install required libraries:
-bash
+Block-chain Voting System Project Using Python
+
+* Install required libraries: bash
 
 pip install Flask requests
 
-1.)Import necessary libraries:
+* 1.)Import necessary libraries:
 
 from hashlib import sha256
 import json
@@ -14,7 +14,9 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-1.)Create basic blockchain structures:
+
+* 1.)Create basic blockchain structures:
+
 
 class Block:
     def __init__(self, index, previous_hash, timestamp, data, hash):
@@ -37,7 +39,8 @@ def create_genesis_block():
 # Initialize the blockchain with the genesis block
 blockchain = [create_genesis_block()]
 
-1.)Implement the voting contract:
+
+* 1.)Implement the voting contract:
 
 class VotingContract:
     def __init__(self):
@@ -59,7 +62,9 @@ class VotingContract:
 # Initialize the voting contract
 voting_contract = VotingContract()
 
-1.)Implement the blockchain API:
+
+* 1.)Implement the blockchain API:
+
 
 @app.route("/new_transaction", methods=["POST"])
 def new_transaction():
@@ -104,9 +109,11 @@ def get_chain():
 if __name__ == "__main__":
     app.run(debug=True)
     
-1.)Run the Flask app:
+
+* 1.)Run the Flask app:
 Save the code in a file named blockchain_voting_system.py and run it:
 
 python blockchain_voting_system.py
 
 The app will start running on http://127.0.0.1:5000/.
+
